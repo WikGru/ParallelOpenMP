@@ -48,7 +48,7 @@ int main()
 	cout.precision(20);
 
 	//Starting matrix A, B, C, D
-#pragma omp parallel for
+#pragma omp parallel for schedule(dynamic)
 	for (int i = 0; i < SIZE; i++) {
 		czekaj(1);
 		for (int j = 0; j < SIZE; j++) {
@@ -60,7 +60,7 @@ int main()
 	}
 
 	//0		Control		AB -> ABC -> ABCD
-#pragma omp parallel for
+#pragma omp parallel for schedule(dynamic)
 	for (int i = 0; i < SIZE; i++) {
 		czekaj(1);
 		for (int j = 0; j < SIZE; j++) {
@@ -69,7 +69,7 @@ int main()
 			}
 		}
 	}
-#pragma omp parallel for
+#pragma omp parallel for schedule(dynamic)
 	for (int i = 0; i < SIZE; i++) {
 		czekaj(1);
 		for (int j = 0; j < SIZE; j++) {
@@ -78,7 +78,7 @@ int main()
 			}
 		}
 	}
-#pragma omp parallel for
+#pragma omp parallel for schedule(dynamic)
 	for (int i = 0; i < SIZE; i++) {
 		czekaj(1);
 		for (int j = 0; j < SIZE; j++) {
@@ -90,7 +90,7 @@ int main()
 
 
 	//1					AB -> CD -> ABCD
-#pragma omp parallel for
+#pragma omp parallel for schedule(dynamic)
 	for (int i = 0; i < SIZE; i++) {
 		czekaj(1);
 		for (int j = 0; j < SIZE; j++) {
@@ -100,7 +100,7 @@ int main()
 			}
 		}
 	}
-#pragma omp parallel for
+#pragma omp parallel for schedule(dynamic)
 	for (int i = 0; i < SIZE; i++) {
 		czekaj(1);
 		for (int j = 0; j < SIZE; j++) {
@@ -113,7 +113,7 @@ int main()
 
 
 	//2					BC -> BCD -> ABCD
-#pragma omp parallel for
+#pragma omp parallel for schedule(dynamic)
 	for (int i = 0; i < SIZE; i++) {
 		czekaj(1);
 		for (int j = 0; j < SIZE; j++) {
@@ -122,7 +122,7 @@ int main()
 			}
 		}
 	}
-#pragma omp parallel for
+#pragma omp parallel for schedule(dynamic)
 	for (int i = 0; i < SIZE; i++) {
 		czekaj(1);
 		for (int j = 0; j < SIZE; j++) {
@@ -131,7 +131,7 @@ int main()
 			}
 		}
 	}
-#pragma omp parallel for
+#pragma omp parallel for schedule(dynamic)
 	for (int i = 0; i < SIZE; i++) {
 		czekaj(1);
 		for (int j = 0; j < SIZE; j++) {
@@ -144,7 +144,7 @@ int main()
 
 
 	//3					BC -> ABC -> ABCD
-#pragma omp parallel for
+#pragma omp parallel for schedule(dynamic)
 	for (int i = 0; i < SIZE; i++) {
 		czekaj(1);
 		for (int j = 0; j < SIZE; j++) {
@@ -153,7 +153,7 @@ int main()
 			}
 		}
 	}
-#pragma omp parallel for
+#pragma omp parallel for schedule(dynamic)
 	for (int i = 0; i < SIZE; i++) {
 		czekaj(1);
 		for (int j = 0; j < SIZE; j++) {
@@ -162,7 +162,7 @@ int main()
 			}
 		}
 	}
-#pragma omp parallel for
+#pragma omp parallel for schedule(dynamic)
 	for (int i = 0; i < SIZE; i++) {
 		czekaj(1);
 		for (int j = 0; j < SIZE; j++) {
